@@ -57,9 +57,9 @@ def gather_statistics(LexSim,metric, todo =['Semeval_A','Semeval_B','Semeval_C',
             # turn into pandas dataframe
             result = pd.DataFrame({'pair_id': pair_id,'gold_label': gold_label, 's1': s1, 's2': s2,  'overlapping': m, 'difficulty':difficulty})
 
-            print(len(m))
+            # print(len(m))
             # result = annotate_difficulty_case(result,metric,split_by)
-            print(result['overlapping'].median())
+            # print(result['overlapping'].median())
             if aggregated_subsets is None:
                 aggregated_subsets = result.groupby('difficulty')['difficulty'].count()
             else:
